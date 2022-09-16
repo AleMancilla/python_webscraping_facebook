@@ -1,6 +1,6 @@
 from cProfile import run
 from pickle import TRUE
-from flask import Flask
+from flask import Flask, render_template
 
 
 import os
@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Hola Mundoasdasdadd"
+    return render_template('index.html')
 
 
 @app.route('/web_scraping/facebook_page/<url_page>')
